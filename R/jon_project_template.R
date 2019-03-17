@@ -36,7 +36,7 @@ jon_project_template <- function(path, ...) {
 
   # write to index file
   writeLines(contents, con = file.path(path, "INDEX"))
-  writeLines(path, con = file.path(path, "README.md"))
+  writeLines(paste("#", path), con = file.path(path, "README.md"))
 
   # Create directory structure
   dir.create(file.path(path, "R/"))
