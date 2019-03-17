@@ -7,4 +7,4 @@ more information.
 
 Install this package with:
 
-    devtools::install_github("rstudio/ptexamples")
+    devtools::install_github("jonleslie/ptexamples")
