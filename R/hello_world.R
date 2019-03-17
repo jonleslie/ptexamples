@@ -39,12 +39,12 @@ hello_world <- function(path, ...) {
   #writeLines(path, con = file.path(path, "README.md"))
 
   # Create directory structure
-  dir.create("R/")
-  dir.create("data")
-  dir.create("data/raw/")
-  dir.create("data/interim/")
-  dir.create("data/processed/")
-  dir.create("notebooks/")
-  dir.create("references/")
+  # dir.create("R/")
+  # dir.create("data")
+  # dir.create("data/raw/")
+  # dir.create("data/interim/")
+  # dir.create("data/processed/")
+  # dir.create("notebooks/")
+  # dir.create("references/")
 
 }
