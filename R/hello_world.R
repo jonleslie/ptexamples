@@ -36,15 +36,15 @@ hello_world <- function(path, ...) {
 
   # write to index file
   writeLines(contents, con = file.path(path, "INDEX"))
-  #writeLines(path, con = file.path(path, "README.md"))
+  writeLines(path, con = file.path(path, "README.md"))
 
   # Create directory structure
   dir.create(file.path(path, "R/"))
-  # dir.create("data")
-  # dir.create("data/raw/")
-  # dir.create("data/interim/")
-  # dir.create("data/processed/")
-  # dir.create("notebooks/")
-  # dir.create("references/")
+  dir.create(file.path(path, "data"))
+  dir.create(file.path(path, "data/raw/"))
+  dir.create(file.path(path, "data/interim/"))
+  dir.create(file.path(path, "data/processed/"))
+  dir.create(file.path(path, "notebooks/"))
+  dir.create(file.path(path, "references/"))
 
 }
