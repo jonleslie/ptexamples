@@ -38,7 +38,7 @@ jon_project_template <- function(path, ...) {
   writeLines(contents, con = file.path(path, "INDEX"))
   writeLines(paste("#", path), con = file.path(path, "README.md"))
 
-  # Create directory structure
+  # create directory structure
   dir.create(file.path(path, "R/"))
   dir.create(file.path(path, "data"))
   dir.create(file.path(path, "data/raw/"))
@@ -47,4 +47,14 @@ jon_project_template <- function(path, ...) {
   dir.create(file.path(path, "notebooks/"))
   dir.create(file.path(path, "references/"))
 
+  # create .gitignore file
+  gitignore_contents <- paste(
+    paste("# RStudio files",".Rproj.user", "", sep = "\n"),
+    paste("# History files",".Rhistory", "", sep = "\n"),
+    paste("# Session Data files",".RData", "", sep = "\n"),
+    sep = "\n"
+  )
+  writeLines(gitignore_contents, con = file.path(path, ".gitignore"))
+
 }
+
