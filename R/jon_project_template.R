@@ -58,6 +58,8 @@ jon_project_template <- function(path, ...) {
     paste("# RStudio files",".Rproj.user", "", sep = "\n"),
     paste("# History files",".Rhistory", "", sep = "\n"),
     paste("# Session Data files",".RData", "", sep = "\n"),
+    paste("# Contents of data/ folder", "data/*", "", sep = "\n"),
+    paste("# exception to the rule for the data folder", "!data/.gitkeep ", "", sep = "\n"),
     sep = "\n"
   )
   writeLines(gitignore_contents, con = file.path(path, ".gitignore"))
