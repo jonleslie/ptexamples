@@ -68,7 +68,7 @@ jon_project_template <- function(path, ...) {
     paste("# exceptions to the rule",
           "!data/raw/.gitkeep",
           "!data/interim/.gitkeep",
-          "!data/processed/.gitkeep€",
+          "!data/processed/.gitkeep",
           "",
           sep = "\n"),
     sep = "\n"
