@@ -40,18 +40,17 @@ jon_project_template <- function(path, ...) {
 
   # create directory structure
   dir.create(file.path(path, "R/"))
-  writeLines(text = NULL, con = file.path(path, "R/.gitkeep"))
+  file.create("R/.gitkeep")
   dir.create(file.path(path, "data"))
-  dir.create(file.path(path, "data/raw/"))
-  writeLines(text = NULL, con = file.path(path, "data/raw/.gitkeep"))
+  file.create("data/raw/.gitkeep")
   dir.create(file.path(path, "data/interim/"))
-  writeLines(text = NULL, con = file.path(path, "data/interim/.gitkeep"))
+  file.create("data/interim/.gitkeep")
   dir.create(file.path(path, "data/processed/"))
-  writeLines(text = NULL, con = file.path(path, "data/processed/.gitkeep"))
+  file.create("data/processed/.gitkeep")
   dir.create(file.path(path, "notebooks/"))
-  writeLines(text = NULL, con = file.path(path, "notebooks/.gitkeep"))
+  file.create("notebooks/.gitkeep")
   dir.create(file.path(path, "references/"))
-  writeLines(text = NULL, con = file.path(path, "references/.gitkeep"))
+  file.create("references/.gitkeep")
 
 
   # create .gitignore file
