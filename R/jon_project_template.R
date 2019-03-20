@@ -42,6 +42,7 @@ jon_project_template <- function(path, ...) {
   dir.create(file.path(path, "R/"))
   file.create("R/.gitkeep")
   dir.create(file.path(path, "data"))
+  dir.create(file.path(path, "data/raw"))
   file.create("data/raw/.gitkeep")
   dir.create(file.path(path, "data/interim/"))
   file.create("data/interim/.gitkeep")
@@ -58,8 +59,6 @@ jon_project_template <- function(path, ...) {
     paste("# RStudio files",".Rproj.user", "", sep = "\n"),
     paste("# History files",".Rhistory", "", sep = "\n"),
     paste("# Session Data files",".RData", "", sep = "\n"),
-    paste("# Contents of data/ folder", "data/*", "", sep = "\n"),
-    paste("# exception to the rule for the data folder", "!data/.gitkeep ", "", sep = "\n"),
     sep = "\n"
   )
   writeLines(gitignore_contents, con = file.path(path, ".gitignore"))
