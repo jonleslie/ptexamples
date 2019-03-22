@@ -40,18 +40,18 @@ jon_project_template <- function(path, ...) {
 
   # create directory structure
   dir.create(file.path(path, "R/"))
-  file.create("R/.gitkeep")
+  file.create(file.path(path, "R/.gitkeep"))
   dir.create(file.path(path, "data"))
   dir.create(file.path(path, "data/raw"))
-  file.create("data/raw/.gitkeep")
+  file.create(file.path(path, "data/raw/.gitkeep"))
   dir.create(file.path(path, "data/interim/"))
-  file.create("data/interim/.gitkeep")
+  file.create(file.path(path, "data/interim/.gitkeep"))
   dir.create(file.path(path, "data/processed/"))
-  file.create("data/processed/.gitkeep")
+  file.create(file.path(path, "data/processed/.gitkeep"))
   dir.create(file.path(path, "notebooks/"))
-  file.create("notebooks/.gitkeep")
+  file.create(file.path(path, "notebooks/.gitkeep"))
   dir.create(file.path(path, "references/"))
-  file.create("references/.gitkeep")
+  file.create(file.path(path, "references/.gitkeep"))
 
 
   # create .gitignore file
@@ -59,18 +59,18 @@ jon_project_template <- function(path, ...) {
     paste("# RStudio files",".Rproj.user", "", sep = "\n"),
     paste("# History files",".Rhistory", "", sep = "\n"),
     paste("# Session Data files",".RData", "", sep = "\n"),
-    # paste("# Ignore data files",
-    #       "data/raw/*",
-    #       "data/interim/*",
-    #       "data/processed/*",
-    #       "",
-    #       sep = "\n"),
-    # paste("# exceptions to the rule",
-    #       "!data/raw/.gitkeep",
-    #       "!data/interim/.gitkeep",
-    #       "!data/processed/.gitkeep",
-    #       "",
-    #       sep = "\n"),
+    paste("# Ignore data files",
+          "data/raw/*",
+          "data/interim/*",
+          "data/processed/*",
+          "",
+          sep = "\n"),
+    paste("# exceptions to the rule",
+          "!data/raw/.gitkeep",
+          "!data/interim/.gitkeep",
+          "!data/processed/.gitkeep",
+          "",
+          sep = "\n"),
     sep = "\n"
   )
   writeLines(gitignore_contents, con = file.path(path, ".gitignore"))
